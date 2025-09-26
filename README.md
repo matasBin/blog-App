@@ -4,6 +4,7 @@ A modern, full-stack social blogging application with real-time features, AI-pow
 
 🌟 Features
 Frontend (React)
+
 User Authentication - Login/Register with JWT
 
 Post Management - Create, view, and delete blog posts
@@ -32,6 +33,8 @@ AI Integration - Gemini AI for content generation
 
 Input Validation - Comprehensive request validation
 
+
+
 🚀 Quick Start
 
 Prerequisites
@@ -41,6 +44,7 @@ Node.js (v14 or higher)
 MongoDB
 
 Gemini AI API key
+
 
 
 🛠️ Tech Stack
@@ -73,6 +77,7 @@ bcrypt - Password hashing
 Google Gemini AI - Content generation
 
 
+
 🔧 API Endpoints
 
 POST /api/register - User registration
@@ -90,6 +95,7 @@ GET /api/allUsers - Get all users
 PUT /api/editProfileImg - Update profile image
 
 POST /api/addComment - Add comment to post
+
 
 
 🎯 Usage
