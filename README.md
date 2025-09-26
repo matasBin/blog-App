@@ -1,4 +1,5 @@
-Full-Stack Social Blogging Platform
+Full-Stack Social Blogging Platform.
+
 A modern, full-stack social blogging application with real-time features, AI-powered content creation, and user interactions.
 
 🌟 Features
