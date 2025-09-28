@@ -1,13 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {socket} from "../socket";
-import {currentUser} from "../store/allStatesStore";
 import useLoggedInUser from "../hooks/useLoggedInUser";
 import {convertTime} from "../utils/convertTime";
 
 const LiveChatPage = () => {
 
     const messageInput = useRef();
-    const setLoggedInUser = currentUser((state) => state.setCurrentUser);
 
     const [messages, setMessages] = useState([])
 

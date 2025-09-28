@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {currentUser, posts, users} from "../store/allStatesStore";
+import React, {useEffect, useRef} from 'react';
+import {currentUser, posts} from "../store/allStatesStore";
 import {useParams} from "react-router-dom";
 import {convertDate} from "../utils/convertDate";
 
@@ -12,8 +12,6 @@ const SinglePostPage = () => {
     const postsArray = posts((state) => state.postsArray)
     const setPostsArray = posts((state) => state.setPostsArray)
 
-    const usersArray = users((state) => state.usersArray)
-
     const commentInput = useRef()
 
     const post = postsArray.find(post => post._id === postId)
@@ -24,7 +22,6 @@ const SinglePostPage = () => {
             const data = await res.json()
             console.log(data)
             setPostsArray(data)
-            /*setIsLoggedIn(localStorage.getItem("token"))*/
         }
 
         getPosts()
@@ -52,10 +49,6 @@ const SinglePostPage = () => {
         }
 
     }
-
-    /* function logUser() {
-         console.log(postUser)
-     }*/
 
     return (
         <div className={"SinglePostPage"}>

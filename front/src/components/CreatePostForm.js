@@ -9,6 +9,7 @@ const CreatePostForm = () => {
     const imageInput = useRef();
     const descriptionInput = useRef();
 
+    /* Fetch function to create a post with given title, image, description and token for authorization*/
     async function createPost() {
         const post = {
             title: titleInput.current.value,

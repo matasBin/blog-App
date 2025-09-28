@@ -24,7 +24,8 @@ const CreatePostFormAi = () => {
     const topicInputAi = useRef();
     const ImageInputAi = useRef();
 
-    async function createPostAi() {
+
+    async function createPostAi() {         /*fetch function to create a post with given topic, image and ai prompt*/
         if(!selectedPrompt) {
             toast.error("Please select AI mood", {
                 position: "bottom-right"
@@ -32,7 +33,7 @@ const CreatePostFormAi = () => {
             return
         }
 
-        setIsLoading(true)
+        setIsLoading(true)      /*Sets a loader while the request is being processed*/
 
         const post = {
             topic: topicInputAi.current.value,
@@ -64,7 +65,7 @@ const CreatePostFormAi = () => {
             }
         } catch (e) {
             console.log(e)
-        } finally {
+        } finally {                     /*Removes the loader once the request is completed*/
             setIsLoading(false)
         }
     }

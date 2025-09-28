@@ -1,27 +1,22 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {changeForm, currentUser} from "../store/allStatesStore";
 import {socket} from "../socket";
 import {toast, ToastContainer} from "react-toastify";
 import {useNavigate} from "react-router-dom";
-import useLoggedInUser from "../hooks/useLoggedInUser";
 
 const Login = () => {
 
     const navigate = useNavigate()
-
     const setIsLoggedIn = currentUser((state) => state.setIsLoggedIn)
-
     const setToLogin = changeForm((state) => state.setToLogin)
-
     const [errorMessage, setErrorMessage] = useState("")
-
     const emailInput = useRef();
     const passwordInput = useRef();
-
     const setLoggedInUser = currentUser((state) => state.setCurrentUser)
 
 
-    async function login() {
+
+    async function login() {        /*Login fetch function, sends email and password to backend*/
 
         const user = {
             email: emailInput.current.value,

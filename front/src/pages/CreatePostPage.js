@@ -1,5 +1,5 @@
-import React, {useRef, useState} from 'react';
-import {toast, ToastContainer} from "react-toastify";
+import React, {useState} from 'react';
+import {ToastContainer} from "react-toastify";
 import CreatePostForm from "../components/CreatePostForm";
 import CreatePostFormAI from "../components/CreatePostFormAI";
 
@@ -7,6 +7,7 @@ const CreatePostPage = () => {
 
     const [withAi, setWithAi] = useState(false)
 
+    /*Function to switch between manual and AI creation of posts*/
     function switchToAi() {
         setWithAi(!withAi)
     }
@@ -28,7 +29,13 @@ const CreatePostPage = () => {
 
 
         <ToastContainer/>
-            <button className={"createPostWithAi"} onClick={switchToAi}>Create Post with AI</button>
+            {
+                withAi ?
+                    <button className={"createPostWithAi"} onClick={switchToAi}>Create Post Manually</button>
+                    :
+                    <button className={"createPostWithAi"} onClick={switchToAi}>Create Post with AI</button>
+            }
+
         </div>
     );
 };
