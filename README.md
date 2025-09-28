@@ -1,5 +1,10 @@
 Full-Stack Social Blogging Platform.
 
+![App Demo](https://github.com/user-attachments/assets/bf9aad8f-6ea1-48a7-bd95-4ed3eb3b9287)
+
+![Live Chat Demo](https://github.com/user-attachments/assets/8d00b52c-412a-48cc-9bd1-b826d1cd7983)
+
+
 A modern, full-stack social blogging application with real-time features, AI-powered content creation, and user interactions.
 
 🌟 Features
@@ -85,6 +90,7 @@ POST /api/register - User registration
 POST /api/login - User login
 
 POST /api/createPost - Create new post
+
 
 POST /api/createPostAI - AI-generated post
 
