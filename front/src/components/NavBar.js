@@ -16,8 +16,6 @@ const NavBar = () => {
         })
     }, []);
 
-    const isLoggedIn = currentUser((state) => state.isLoggedIn)
-
     return (
         <div className={ "NavBar"}>
 
@@ -30,17 +28,12 @@ const NavBar = () => {
                     <Link to={"/profile"}>My Profile</Link>
                     <Link to={"/createPost"}>Create Post</Link>
                     <Notification/>
+                    <div className="loggedInAs">
+                        <h4>{loggedInUser.username}</h4>
+                        <LogoutButton/>
+                    </div>
                 </>
             }
-            {
-                loggedInUser &&
-                <div className="loggedInAs">
-                    <h4>{loggedInUser.username}</h4>
-                    <LogoutButton/>
-                </div>
-            }
-
-
 
         </div>
     );
